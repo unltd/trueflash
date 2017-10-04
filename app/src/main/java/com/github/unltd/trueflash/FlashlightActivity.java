@@ -21,8 +21,8 @@ import android.widget.ToggleButton;
 
 import io.github.sanbeg.flashlight.R;
 
-public class FlashLightActivity extends Activity implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = "FlashLightActivity";
+public class FlashlightActivity extends Activity implements SharedPreferences.OnSharedPreferenceChangeListener {
+    private static final String TAG = "FlashlightActivity";
     private static final String LONG_PRESS = "long_press";
     public static final String WHITE = "white";
     private final Flash flash = new Flash();
@@ -42,7 +42,7 @@ public class FlashLightActivity extends Activity implements SharedPreferences.On
         protected void onPostExecute(Boolean success) {
             theButton.setEnabled(true);
             if (! success) {
-                Toast.makeText(FlashLightActivity.this, "Failed to access camera.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FlashlightActivity.this, "Failed to access camera.", Toast.LENGTH_SHORT).show();
             }
         }
     }
